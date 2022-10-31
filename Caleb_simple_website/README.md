@@ -1,4 +1,4 @@
-#Example  
+# Example  
 
 This is just a small example of a working website using HTML, CSS, and Javascript to create an interactable frontend.  
 This will be expanded upon to create the actual website with links to other pages, like a login page.  
