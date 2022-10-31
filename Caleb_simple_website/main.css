@@ -1,0 +1,42 @@
+:root {
+    --blue: #48b9e6;
+    --white: #FFFFFF;
+    --black: #000000;
+    --green: #00FF00;
+}
+body {/*body is the selector for what recieves the style*/
+    font-family: monospace; /*This is the decleration for what the body should by styled with*/
+    background: var(--bg);
+    color: var(--fontColor);
+}
+li {
+    list-style: circle;
+}  
+.list { /*class selecter of all list items*/
+    list-style: square;
+}  
+.light-theme {
+    --bg: var(--blue);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Website</title>
+    <link rel="stylesheet" href="main.css"> <!-- This will link the css style sheet to this html file.-->
+    <!--Editing the linked css file will change the style for this file, and all other html files linked to that css file.-->
+</head>
+<body class="dark-theme"> <!--content visible to the viewers in the browser.-->
+    <h1>Task List</h1> <!--Header 1 style-->
+    <p id="msg">Current tasks:</p> <!--paragraph element, the id enables there to be multiple <p> with different styles-->
+    <ul> <!--This is an unordered list.-->
+      <li class="list">Add visual styles</li> <!--These are list items-->
+      <li class="list">Add light and dark themes</li>
+      <li>Enable switching the theme</li>
+    </ul>
+    <div> <!--div element that will be used for the button to swap themes.-->
+        <button class="btn">Dark</button>
+    </div>
+    <script src="app.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript> <!--If there is no javascript to run the scrip this will show-->
+</body>
+</html>
