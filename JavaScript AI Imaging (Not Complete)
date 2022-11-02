@@ -1,3 +1,4 @@
+//
 (function (global, undefined) {
 "use strict";
 undefinedVariable = {};
@@ -6,3 +7,4 @@ funtion initializeProperties(target, members)
 var keys = Object.keys(members);
 var properties;
 var i, len;
+//
