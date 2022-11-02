@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 
 }
 .body{
@@ -18,10 +20,14 @@
     position: absolute;
     
 }
+.content {
+    margin-top: 20px;
+    color: white;
+}
 
 .navbar{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     padding: 20px;
     padding-left: 50px;
     padding-right: 30px;
@@ -48,7 +54,6 @@
     text-decoration: none;
     font-size: 20px;
     color: white;
-    font-family: sans-serif;
  }
 
  nav ul li button{
@@ -58,7 +63,6 @@
     border: none;
     background: transparent;
     cursor: pointer;
-    font-family: sans-serif;
  }
 
  nav ul li button:hover{
@@ -78,7 +82,6 @@ a{
 .logo{
     color: beige;
     font-size: 35px;
-    font-family: Arial;
     padding-left: 20px;
     float: left;
     padding-top: 10px;
@@ -106,6 +109,22 @@ a{
     box-shadow: 0 0 20px 9px #ff61241f;
 
 }
+.loginbtn {
+    padding: 10px;
+    font-size: 16px;
+}
+.search-box {
+    margin-left: 40%;
+}
+.btn {
+    margin-top: 15px;
+    margin-left: 30px;
+    padding: 10px;
+}
+.btn:hover{
+    background-color: navy;
+    color: white;
+}
 
 .toggle-btn{
     padding: 10px 30px;
@@ -115,6 +134,10 @@ a{
     outline: none;
     position: relative;
 
+}
+.menu {
+    margin-left: 80%;
+    list-style: none;
 }
 
 #btn{
@@ -195,7 +218,19 @@ span{
     color: white;
     font-size: 15;
 }
+.srch{
+    width: 200px;
+    height: 40px;
+    border: 1px solid white;
+    margin-top: 13px;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 
+}
 
 
 /*
