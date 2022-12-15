@@ -6,6 +6,8 @@ Video for getting xampp and running locally: https://www.youtube.com/watch?v=XBj
 Video for login functions: https://www.youtube.com/watch?v=gCo6JqGMi30  
 
 For the recommendation system you need to run the following command with python installed:  
-pip install spotipy  
+```bash
+pip install spotipy
+```
 
 Check the spotipy gitHub for more information.
