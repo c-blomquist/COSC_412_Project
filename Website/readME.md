@@ -10,4 +10,6 @@ For the recommendation system you need to run the following command with python 
 pip install spotipy
 ```
 
-Check the spotipy gitHub for more information.
+Check the spotipy gitHub for more information.  
+
+You will also need to connect to the Spotify API through the client information shared in the resource document, or use your own spotify API information.
