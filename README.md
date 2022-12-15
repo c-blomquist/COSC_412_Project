@@ -9,6 +9,6 @@ We will also incorperate an appropiate background image for the website so that 
 
 
 The spotipy documentation: https://spotipy.readthedocs.io/en/2.16.1/  
-The github for spotipy: https://github.com/AmolMavuduru/SpotifyRecommenderSystem  
+The github for spotipy: https://github.com/spotipy-dev/spotipy
 The Spotify Web API: https://developer.spotify.com/documentation/web-api/
 
