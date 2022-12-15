@@ -3,4 +3,9 @@ To run the website locally using localhost you need to use xampp. You also need 
 Name the database cosc412 and add a table for users.  
 
 Video for getting xampp and running locally: https://www.youtube.com/watch?v=XBj_le81sAc&list=PL0eyrZgxdwhxhsuT_QAqfi-NNVAlV4WIP
-Video for login functions: https://www.youtube.com/watch?v=gCo6JqGMi30
+Video for login functions: https://www.youtube.com/watch?v=gCo6JqGMi30  
+
+For the recommendation system you need to run the following command with python installed:  
+pip install spotipy  
+
+Check the spotipy gitHub for more information.
