@@ -1,0 +1,369 @@
+//(function (global, undefined) {
+//"use strict";
+//undefinedVariable = {};
+//undefinedVariable.prop = 5;
+//funtion initializeProperties(target, members)
+//var keys = Object.keys(members);
+//var properties;
+//var i, len;
+
+//Below this starts with official coding to generate pleasing background image. Above gives important properties of AI we will make.
+
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+<body>
+<h1>Spotmy is here! Upgrade to premium now and enjoy free songs ad free! </h1>
+<h2>Watch on any mobile platform anytime!</h2>
+<div id="result"></div>
+<img id="image" src="https://cdn.wallpapersafari.com/73/36/kjoK1u.png" width="100%">
+
+<script>
+// Initialize Image Classifier with MobileNet.
+const classifier =  ml5.imageClassifier('MobileNet');
+classifier.classify(document.getElementById("image"), gotResult);
+
+// Function to run when results arrive
+function gotResult(error, results) {
+  if (error) {
+    element.innerHTML = error;
+  } else {
+    let num = results[0].confidence * 10;
+    element.innerHTML = results[0].label + "<br>Confidence: " + num.toFixed(2) + "%";
+  }
+}
+</script>
+</body>
+</html>
+
+//------------------------------------------------------------------------------------------------------------------------------------------
+//Start of new code below (read these code files as separate, not together at once to avoid confusion)
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Spotmy Login Form</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
+
+//------------------------------------------------------------------------------------------------------------------------------------------
+//Start of new code below (read these code files as separate, not together at once to avoid confusion)
+
+// import required classes and packages   
+// import classes available in jsoup  
+import org.jsoup.Jsoup;  
+import org.jsoup.nodes.Document;  
+import org.jsoup.nodes.Element;  
+import org.jsoup.select.Elements;  
+// import exception, FileWriter and collection classes    
+import java.io.FileWriter;  
+import java.io.IOException;  
+import java.util.ArrayList;  
+import java.util.HashSet;  
+import java.util.Iterator;  
+import java.util.List;  
+// create WebCrawler to understand how we can extract articles  
+public class WebCrawler {  
+    // initialize MAX_DEPTH variable with final value  
+private static final int MAX_DEPTH = 2;  
+      
+    // create set and nested list for storing links and articles   
+private HashSet<String>urlLinks;  
+private List<List<String>> articles;  
+    // initialize set and list  
+public WebCrawler() {  
+    urlLinks = new HashSet<>();  
+articles = new ArrayList<>();  
+    }  
+    //get all URLs that start with "https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/" and add them to the set  
+public void getPageLinks(String URL, int depth) {  
+      
+    //we use the conditional statement to check whether we have already crawled the URL or not.  
+    //we also check whether the depth reaches to MAX_DEPTH or not  
+if (urlLinks.size() != 50 && !urlLinks.contains(URL) && (depth < MAX_DEPTH) && (URL.startsWith("https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/") || URL.startsWith("https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/"))){   
+System.out.println(">> Depth: " + depth + " [" + URL + "]");   
+  
+            // use try catch block for recursive process  
+try {   
+    // if the URL is not present in the set, we add it to the set  
+    urlLinks.add(URL);   
+      
+    // fetch the HTML code of the given URL by using the connect() and get() method and store the result in Document  
+                Document doc = Jsoup.connect(URL).get();   
+  
+                // we use the select() method to parse the HTML code for extracting links of other URLs and store them into Elements  
+                Elements availableLinksOnPage = doc.select("a[href]");   
+  
+                // increase depth  
+depth++;   
+  
+                // for each extracted URL, we repeat above process  
+for (Element ele : availableLinksOnPage) {   
+    if(ele.attr("abs:href").startsWith("https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/") || ele.attr("abs:href").startsWith("https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/")) {  
+        // call getPageLinks() method and pass the extracted URL to it as an argument  
+getPageLinks(ele.attr("abs:href"), depth);  
+    }  
+                }   
+            }   
+            // handle exception  
+catch (IOException e) {   
+    // print exception messages  
+    System.err.println("For '" + URL + "': " + e.getMessage());   
+            }   
+        }   
+    }  
+  
+    //Connect to each link saved in the article and find all the articles in the page  
+public void getArticles() {  
+    Iterator<String>i = urlLinks.iterator();  
+while (i.hasNext()) {  
+      
+      
+        // create variable doc that store document data  
+        Document doc;  
+          
+        // we put the recursive code in a try-catch block  
+try {  
+      
+doc = Jsoup.connect(i.next()).get();  
+                Elements availableArticleLinks = doc.select("a[href]");  
+  
+  
+for (Element ele : availableArticleLinks) {  
+      
+                    //we get only those article's  title which contain java 8  
+                    // use matches() and regx method to check whether text contains Java 8 or not  
+    if (ele.text().contains("python")) {  
+        System.out.println(ele.text());  
+        // create temp list that stores articles  
+        ArrayList<String> temp = new ArrayList<>();  
+        temp.add(ele.text()); //get title of the article  
+        temp.add(ele.attr("abs:href")); //get the URL of the article  
+                        // add article list in the nested article list  
+        articles.add(temp);  
+                    }  
+                }  
+            }   
+            // handle exception   
+catch (IOException e) {  
+    // show error message   
+System.err.println(e.getMessage());  
+            }  
+    }  
+    }  
+  
+    // create writeToFile() method to write data into file  
+public void writeToFile(String fName) {  
+    // declare variable of type FileWriter  
+FileWriter wr;  
+  
+        //use try-catch block to write data into file  
+try {  
+    // initialize FileWriter for fName  
+wr = new FileWriter(fName);  
+  
+for(int i = 0; i<articles.size(); i++) {  
+      
+    try {  
+                    String article = "- Title: " + articles.get(i).get(0) + " (link: " + articles.get(i).get(1) + ")\n";  
+  
+                    // show the article and save it to the specified file  
+System.out.println(article);  
+wr.write(article);  
+  
+    }catch (IOException e) {  
+System.err.println(e.getMessage());  
+                }  
+            }  
+            // close FileWriter class object  
+wr.close();  
+        } catch (IOException e) {  
+System.err.println(e.getMessage());  
+        }  
+    }  
+    // main() method start  
+public static void main(String[] args) {  
+    // create instance of the ExtractArticlesExample class  
+    ExtractArticlesExample obj = new ExtractArticlesExample();  
+      
+    // call getPageLinks() method to get all the page links of the specified URL  
+    obj.getPageLinks("https://www.towson.edu/fcsm/departments/computerinfosci/facultystaff/", 0);  
+  
+        // call getArticles() method to find all the articles  
+    obj.getArticles();  
+  
+        // call writeToFile() method to write all the articles in the specified file  
+    obj.writeToFile("Web Crawler Example"); 
+    }
+}
+
